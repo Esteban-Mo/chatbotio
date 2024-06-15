@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Application</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+<div class="chat-container">
+  <div class="sidebar">
+    <h2>Liste des Bots</h2>
+    <div class="bot-list" id="bot-list">
+      <!-- Les bots -->
+    </div>
+  </div>
+  <div class="chat-section">
+    <div class="chat-header">
+      <h1>Chatbot Application</h1>
+      <button id="clear-history-button" style="display: none;">Effacer l'historique</button>
+    </div>
+    <div class="chat-window" id="chat-window">
+      <!-- Les messages -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="message-input" placeholder="Tapez votre message...">
+      <button id="send-button">Envoyer</button>
+    </div>
+  </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
