@@ -1,10 +1,9 @@
-import { appendMessage, appendDivider, saveChatBodyToLocalStorage, saveMessageToLocalStorage, saveDividerToLocalStorage, loadChatHistory, clearChatHistory, updateClearHistoryButtonVisibility, scrollToBottom } from './chatHelpers.js';
+import { appendMessage, appendDivider, loadChatHistory, clearChatHistory, scrollToBottom } from './chatHelpers.js';
 import Bot from './Bot.js';
-import { fetchJoke, fetchQuoteInFrench, fetchFactInFrench, fetchPokemonTeam } from './fetchFunctions.js';
+import { fetchJoke, fetchQuote, fetchFact, fetchPokemonTeam } from './fetchFunctions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const botList = document.getElementById('bot-list');
-    const chatWindow = document.getElementById('chat-window');
     const messageInput = document.getElementById('message-input');
     const sendButton = document.getElementById('send-button');
     const clearHistoryButton = document.getElementById('clear-history-button');
@@ -16,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
             'help': () => bots[0].getHelpMessage()
         }),
         new Bot('Bot Beta', 'Je suis le bot Beta.', {
-            'citation': fetchQuoteInFrench,
+            'citation': fetchQuote,
             'help': () => bots[1].getHelpMessage()
         }),
         new Bot('Bot Gamma', 'Je suis le bot Gamma.', {
-            'fait': fetchFactInFrench,
+            'fait': fetchFact,
             'help': () => bots[2].getHelpMessage()
         })
     ];

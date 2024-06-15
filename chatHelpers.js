@@ -36,7 +36,7 @@ export function appendDivider() {
     chatWindow.appendChild(dividerElement);
 
     saveDividerToLocalStorage(currentTime);
-    saveChatBodyToLocalStorage(); // Save entire chat body after each divider
+    saveChatBodyToLocalStorage();
 }
 
 export function saveChatBodyToLocalStorage() {
